@@ -1,0 +1,33 @@
+.App {
+  text-align: center;
+}
+
+* {
+  font-family: 'bree serif';
+}
+
+.bg {
+  background-color: #1e293b;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  color: #f0bb03;
+  font-size: 30px;
+  font-weight: bold;
+}
+p {
+  color: #ffffff;
+  font-weight: 750;
+  font-size: 20px;
+}
+button {
+  color: #1e293b;
+  background-color: #ffffff;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+}
