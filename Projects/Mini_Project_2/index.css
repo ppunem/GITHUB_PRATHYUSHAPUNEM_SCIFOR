@@ -102,8 +102,31 @@ a:hover{
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
 
 }
+.abt{
+    overflow-x: hidden;
+}
 .about-text{
     line-height: 1.8;
+}
+
+.about-content .animate{
+    transition: 1s;
+}
+
+.imagecont .animate{
+    transform: scale(.7);
+}
+
+.imagecont.showanimate .animate{
+    transform: scale(1);
+}
+
+.textcont p{
+    transform: translateX(100%);
+}
+
+.textcont.showanimate p{
+    transform: translateX(0);
 }
 
 /* project section css */
@@ -157,7 +180,7 @@ a:hover{
     border-top-left-radius: 50px;
     border-bottom-right-radius: 50px;
     padding: 25px;
-    border: 5px solid #DCD3FF;
+    border: 5px solid orange;
 }
 .c-3:hover{
     content: '';
@@ -177,7 +200,7 @@ a:hover{
     border-top-left-radius: 50px;
     border-bottom-right-radius: 50px;
     padding: 25px;
-    border: 5px solid #E7FFAC;
+    border: 5px solid violet;
 }
 .c-4:hover{
     content: '';
@@ -300,6 +323,7 @@ footer{
 .x{
     border-color: silver;
 }
+
 .navigation:hover{
     color: #00abf0;
 }
@@ -325,7 +349,7 @@ footer{
     }
     #home{
         height:100vh;
-        background-image: url('https://i.ibb.co/QDp6hkS/profile-pic-2.jpg');
+        background-image: url('images/profile-pic-2.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -368,7 +392,7 @@ footer{
 @media screen and (min-width:993px){
     #home{
         height:100vh;
-        background-image: url('https://i.ibb.co/pZV07F0/profile-pic-lg-2.jpg');
+        background-image: url('images/profile-pic-lg-2.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;

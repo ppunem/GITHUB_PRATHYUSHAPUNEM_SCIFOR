@@ -2,8 +2,8 @@
 let logoImg = document.getElementById('logo');
 
 // Define paths for the static and animated images
-const staticImage = 'https://i.ibb.co/0mg7xGc/logo.jpg';
-const animatedImage = 'https://i.ibb.co/JdZG5bz/animated.jpg';
+const staticImage = 'images/logo.jpg';
+const animatedImage = 'images/animated.jpg';
 
 // Event listeners to change the logo image on hover
 logoImg.addEventListener('mouseover', () => {
@@ -90,4 +90,21 @@ desc.forEach(each=>{
     each.innerHTML=each.textContent.split("").map((text,wave)=>`<span style="margin-top:15px;transition-delay:${wave * 25}ms">${text}</span>`).join(' ');
   });
 
-  
+
+//   about section animation
+  let animations=document.querySelectorAll(".about-content");
+
+  window.onscroll=()=>{
+    animations.forEach(each=>{
+        let top=window.scrollY;
+        let offset=each.offsetTop - 150;
+        let height=each.offsetHeight;
+
+        if (top>=offset && top < offset + height){
+            each.classList.add('showanimate');
+        }else{
+            each.classList.remove('showanimate');
+        }
+    })
+    
+  }
