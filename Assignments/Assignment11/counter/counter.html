@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+    <script src="https://unpkg.com/react/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js" crossorigin></script>
+    <link rel="stylesheet" href="counter.css">
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const { useState } = React;
+
+        function Counter() {
+            const [count, setCount] = useState(0);
+
+            const increment = () => setCount(count + 1);
+            const decrement = () => setCount(count - 1);
+            const reset = () => setCount(0);
+
+            let countcolor;
+            switch (true) {
+               case count>0:
+                    countcolor='more'
+                    break;
+                case count<0:
+                    countcolor='less'
+                    break;
+                default:
+                    countcolor='equal'
+                    break;
+            }
+
+
+            return (
+                <div class='main-container'>
+                    <div class="counter">
+                        <h1>Counter: <span class={countcolor}>{count}</span></h1>
+                        <div>
+                            <button onClick={increment}>Increment</button>
+                            <button onClick={decrement}>Decrement</button>
+                            <button onClick={reset}>Reset</button>
+                        </div>
+                    </div>
+                    
+                </div>
+            );
+        }
+
+        ReactDOM.render(<Counter />, document.getElementById('root'));
+    </script>
+</body>
+</html>

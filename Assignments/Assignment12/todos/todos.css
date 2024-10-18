@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    margin-left: 5px;
+}
+.delete-button:hover{
+    color: red;
+    border: solid 2px red;
+}
+
+.add-button:hover{
+    color: green;
+    border:solid 2px green;
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 15px;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+}
